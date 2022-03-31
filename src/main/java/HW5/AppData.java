@@ -6,8 +6,6 @@ public class AppData implements Serializable {
     private String[] header;
     private int[][] data;
 
-    //сериализуемый объект должен быть максимально простым, поэтому оставляем минимум методов
-    //сделаем, чтобы класс описывал струтуру данных и содержал геттеры и сеттеры
     public AppData() {}
 
     public AppData(String[] header, int[][] data){

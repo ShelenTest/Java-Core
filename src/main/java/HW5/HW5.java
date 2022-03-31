@@ -4,11 +4,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class HW5 {
-    //метод для вывода объекта в файл
-    public static void writeFile(AppData appData2, File file){
+
+    public static void writeFile(AppData appData, File file){
         try (PrintWriter out = new PrintWriter(file)) {
             int k = 0;
-            String[] header = appData2.getHeader();
+            String[] header = appData.getHeader();
             for (String v : header){
                 out.print(v);
                 if (k < header.length - 1) out.print(";");
@@ -16,7 +16,7 @@ public class HW5 {
             }
             out.println();
 
-            int[][] data = appData2.getData();
+            int[][] data = appData.getData();
             for (int i = 0; i < data.length; i++){
                 for (int j = 0; j < data[i].length; j++){
                     out.print( data[i][j]);
